@@ -50,14 +50,14 @@ postRoutes.delete('/:id', (req, res) => __awaiter(void 0, void 0, void 0, functi
         if (!postDB) {
             return res.status(404).json({
                 ok: false,
-                msg: 'no existe un horario por ese id',
+                msg: 'no existe una reserva por ese id',
                 postDB
             });
         }
         yield post_model_1.Post.findByIdAndDelete(uid);
         res.json({
             ok: true,
-            msg: 'Horario eliminado',
+            msg: 'Rerserva eliminada',
             postDB,
         });
     }
